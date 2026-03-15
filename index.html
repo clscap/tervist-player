@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>TERVIST!</title>
 
 <!-- Open Graph (WhatsApp / Facebook preview) -->
@@ -11,53 +13,92 @@
 <meta property="og:url" content="https://clscap.github.io/tervist-player/">
 <meta property="og:image" content="https://clscap.github.io/tervist-player/ankapilt.jpg">
 
-<!-- Optional Twitter preview support -->
+<!-- Twitter preview -->
 <meta name="twitter:card" content="summary_large_image">
 
 <style>
+
 body {
     margin: 0;
-    background: #000;
-    color: #fff;
     font-family: Arial, sans-serif;
+    color: #fff;
     text-align: center;
+
+    /* SKY → MEADOW GRADIENT */
+    background: linear-gradient(
+        to bottom,
+        #6FAEC2 0%,
+        #8FC46C 55%,
+        #7FAF5A 100%
+    );
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* GLASS PLAYER CARD */
+
 .container {
-    padding-top: 60px;
+
+    padding: 35px 30px;
+
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.15);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.35),
+        inset 0 0 0 1px rgba(255,255,255,0.1);
+
 }
+
+/* IMAGE */
 
 img {
     width: 320px;
     max-width: 90%;
+
     border-radius: 16px;
-    box-shadow: 0 0 25px rgba(255,255,255,0.2);
+
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+
+    margin-bottom: 10px;
 }
 
+/* TITLE */
+
 h1 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     letter-spacing: 3px;
 }
 
+/* AUDIO PLAYER */
+
 audio {
-    margin-top: 30px;
+    margin-top: 20px;
     width: 320px;
     max-width: 90%;
 }
+
 </style>
 </head>
 
 <body>
 
 <div class="container">
-    <h1>TERVIST!</h1>
 
-    <img src="ankapilt.jpg" alt="Cover Art">
+<h1>TERVIST!</h1>
 
-    <audio controls>
-        <source src="Tervist.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+<img src="ankapilt.jpg" alt="Cover Art">
+
+<audio controls>
+<source src="Tervist.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
 </div>
 
 </body>
